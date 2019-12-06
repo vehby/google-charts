@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "/Users/gokhan/Vue-Eğitim"
+		},
+		{
+			"path": "/Users/gokhan/Vue-Eğitim/odev-2"
+		},
+		{
+			"path": "/Users/gokhan/Desktop/js-data"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Vue-Eğitim"
+	}
+}

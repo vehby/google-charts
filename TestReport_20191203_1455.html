@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap&subset=latin-ext" rel="stylesheet">
+    <title>General Mobile - Otomsyon Test Sonuçları</title>
+    <script type="text/javascript" src="js/loader.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ["Uygulama", "Başarı oranı", {
+                    role: "style"
+                }],
+                ["Twitter", 66.67, "color: #9f067e"],
+                ["WhatsApp", 50, "color: #6f7b38"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1, {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2
+            ]);
+
+            var options = {
+                title: "Uygulamaların Başarı Oranı",
+
+                bar: {
+                    groupWidth: "95%"
+                },
+                legend: {
+                    position: "none"
+                },
+                backgroundColor: '#f5f5f5',
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values1"));
+            chart.draw(view, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ["Uygulama", "Başarı oranı", {
+                    role: "style"
+                }],
+                ["Twitter", 100, "color: #4e23d0"],
+                ["WhatsApp", 50, "color: #6c044c"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1, {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2
+            ]);
+
+            var options = {
+                title: "Uygulamaların Başarı Oranı",
+
+                bar: {
+                    groupWidth: "95%"
+                },
+                legend: {
+                    position: "none"
+                },
+                backgroundColor: '#f5f5f5',
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values2"));
+            chart.draw(view, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Başarılı - Başarısız'],
+                ['Başarılı', 4.0],
+                ['Başarısız', 3.0]
+            ]);
+
+            var options = {
+                pieHole: 0.4,
+                sliceVisibilityThreshold: .2,
+                backgroundColor: '#f5f5f5',
+
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Başarılı - Başarısız'],
+                ['Başarılı', 5.0],
+                ['Başarısız', 2.0]
+            ]);
+
+            var options = {
+                pieHole: 0.4,
+                sliceVisibilityThreshold: .2,
+                backgroundColor: '#f5f5f5',
+
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>OTOMASYON TEST RAPORU</h1>
+                <p>Test Tarihi : <strong>03.12.2019 14:55</strong></p>
+            </div>
+            <div class="col-md-12">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                        <a class="nav-item nav-link active" id="device-tab1" data-toggle="tab" href="#device1" role="tab" aria-controls="device1" aria-selected="false">GM9PRO-P.9PR.1909A-s</a>
+                        <a class="nav-item nav-link" id="device-tab2" data-toggle="tab" href="#device2" role="tab" aria-controls="device2" aria-selected="false">GM9PLUS-P.9PL.1911.D-d</a>
+                    </div>
+                </nav>
+                <div class="deviceresult p-1">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="device1" role="tabpanel" aria-labelledby="device-tab1">
+                            <div class="col-md-12 pt-4 pb-5">
+                                <h2> Test Sonucu : </h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="donutchart1" class="chart"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="columnchart_values1" class="chart"></div>
+                                    </div>
+                                </div>
+                                <!-- <div class="progress"><div class="progress-bar bg-info  " role="progressbar" style="width:32.59%;" aria-valuenow="32.59" aria-valuemin="0" aria-valuemax="100">32.59</div></div> -->
+                            </div>
+                            <div class="col-md-12 pb-5">
+                                <h3>Cihaz Bilgileri</h3>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Cihaz Adı</th>
+                                            <th scope="col">Cihaz Id</th>
+                                            <th scope="col">Donanım</th>
+                                            <th scope="col">Yazılım Paketi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-primary">
+
+                                            <td>GM9PRO</td>
+                                            <td>e1679222525</td>
+                                            <td>Qualcomm</td>
+                                            <td>P.9PR.1909A-s</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-12 pb-5">
+                                <h3>Testler</h3>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Uygulama Adı</th>
+                                            <th scope="col">Başarılı</th>
+                                            <th scope="col">Başarısız</th>
+                                            <th scope="col">Sonuç</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Twitter</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width:66.67%;" aria-valuenow="66.67" aria-valuemin="0" aria-valuemax="100">66.67</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>WhatsApp</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width:50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="device2" role="tabpanel" aria-labelledby="device-tab2">
+                            <div class="col-md-12 pt-4 pb-5">
+                                <h2> Test Sonucu : </h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="donutchart2" class="chart"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="columnchart_values2" class="chart"></div>
+                                    </div>
+                                </div>
+                                <!-- <div class="progress"><div class="progress-bar bg-info  " role="progressbar" style="width:32.59%;" aria-valuenow="32.59" aria-valuemin="0" aria-valuemax="100">32.59</div></div> -->
+                            </div>
+                            <div class="col-md-12 pb-5">
+                                <h3>Cihaz Bilgileri</h3>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Cihaz Adı</th>
+                                            <th scope="col">Cihaz Id</th>
+                                            <th scope="col">Donanım</th>
+                                            <th scope="col">Yazılım Paketi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-primary">
+
+                                            <td>GM9PLUS</td>
+                                            <td>0123456789ABCDEF</td>
+                                            <td>Mediatek</td>
+                                            <td>P.9PL.1911.D-d</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-12 pb-5">
+                                <h3>Testler</h3>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Uygulama Adı</th>
+                                            <th scope="col">Başarılı</th>
+                                            <th scope="col">Başarısız</th>
+                                            <th scope="col">Sonuç</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Twitter</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width:100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>WhatsApp</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width:50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
